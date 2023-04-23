@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first-info">
+        <h1 class="first__title">Подберём вуз мечты</h1>
+        <p class="first__text">
+          Ответьте на 8 простых вопросов, и мы составим список наболее подходящих для вас вузов
+        </p>
+        <div class="first-info__image">
+          <img class="first-info__img" src="./assets/pic.svg" alt="picture" />
+        </div>
+      </div>
+      <form class="form">
+        <span class="form__step">Шаг 1/9</span>
+        <div class="form__scroller">
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form-top__title">Для кого вы ищете учебное заведение?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label">
+                <span class="form-content__name">Себе</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Супругу/супруге</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Родственнику</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Коллеге</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Ребенку</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Другое</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">В каком городе планируете поступать?</h4>
+            </div>
+            <div class="form-content">
+              <div class="select">
+                <button class="select-btn">
+                  <div class="select-btn__content">
+                    <span class="select-btn__name">Город</span>
+                    <span class="select-btn__text"></span>
+                  </div>
+                  <svg
+                    class="select__arrow"
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.25 1.5L7 7.75L0.75 1.5"
+                      stroke="#9B9B9B"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <ul class="select__list">
+                  <li class="select__item" data-value="Санкт-Петербург">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Санкт-Петербург</span>
+                  </li>
+                  <li class="select__item" data-value="Москва">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Москва</span>
+                  </li>
+                  <li class="select__item" data-value="Новосибирск">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Новосибирск</span>
+                  </li>
+                  <li class="select__item" data-value="Нижний новгород">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Нижний новгород</span>
+                  </li>
+                  <li class="select__item" data-value="Ростов-на-Дону">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Ростов-на-Дону</span>
+                  </li>
+                </ul>
+                <input type="text" name="select-city" value="" class="select-input" />
+              </div>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Какое образование уже есть?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label">
+                <span class="form-content__name">9 классов</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Колледж/техникум</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">11 классов</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">11 классов</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Училище</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Неоконченное высшее</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Куда планируете поступать?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Вуз</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Колледж/техникум</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Училище</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Какую форму обучения предпочитаете?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Очную</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Заочную</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Дистанционную</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Рассматриваете платное обучение?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Нет, только бюджет</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Да, планирую учиться платно</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label form-content__label--wide">
+                <span class="form-content__name">Возможны оба варианта</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Какая специальность интересует?</h4>
+            </div>
+            <div class="form-content">
+              <div class="select">
+                <button class="select-btn">
+                  <div class="select-btn__content">
+                    <span class="select-btn__name">Специальность</span>
+                    <span class="select-btn__text">Любая</span>
+                  </div>
+                  <svg
+                    class="select__arrow"
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.25 1.5L7 7.75L0.75 1.5"
+                      stroke="#9B9B9B"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <ul class="select__list">
+                  <li class="select__item" data-value="Экономика">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Экономика</span>
+                  </li>
+                  <li class="select__item" data-value="Философия">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Философия</span>
+                  </li>
+                  <li class="select__item" data-value="Социология">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Социология</span>
+                  </li>
+                  <li class="select__item" data-value="Юриспруденция">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Юриспруденция</span>
+                  </li>
+                  <li class="select__item" data-value="Менеджмент">
+                    <span class="select__checkbox"></span>
+                    <input type="checkbox" class="select__input" />
+                    <span>Менеджмент</span>
+                  </li>
+                </ul>
+                <input type="text" name="select-subject" value="Любая" class="select-input" />
+              </div>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Как скоро планируете поступать?</h4>
+            </div>
+            <div class="form-content">
+              <label class="form-content__label">
+                <span class="form-content__name">Как можно быстрее</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Месяц</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Квартал</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Полгода</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+              <label class="form-content__label">
+                <span class="form-content__name">Год</span>
+                <input name="radio" type="radio" class="form-content__input" />
+                <span class="form-content__radio"></span>
+              </label>
+            </div>
+            <div class="form-buttons">
+              <button class="form-button btn-prev form-button--white">
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.5 11.5L1.5 6.5L6.5 1.5"
+                    stroke="#383838"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="form-button__text">Назад</span>
+              </button>
+              <button class="form-button btn-next">
+                <span class="form-button__text">Далее</span>
+                <svg
+                  width="8"
+                  height="13"
+                  viewBox="0 0 8 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 1.5L6.5 6.5L1.5 11.5"
+                    stroke="white"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="section">
+            <div class="form-top">
+              <h4 class="form__title">Ваша подборка готова! 🥳 Куда нам отправить её?</h4>
+            </div>
+            <input name="text" class="input" placeholder="Как вас зовут?" />
+            <input type="tel" class="input" placeholder="Номер телефона" />
+            <input type="email" class="input" placeholder="E-mail" />
+            <button class="submit-btn">Получить подборку</button>
+            <p class="accept">
+              Нажимая на кнопку, вы даете согласие на обработку своих
+              <a class="personal-data" href="#!">Персональных данных</a>
+            </p>
+          </section>
+        </div>
+      </form>
+      <div class="popup">
+        <div class="popup-inner">
+          <img class="popup__img" src="./assets/icon.svg" alt="icon" />
+          <span class="popup__text--bold">Отлично, спасибо!</span>
+          <p class="popup__text">
+            Мы отправили подборку вам на почту. <br />
+            Если подборка не приходит — проверьте спам, возможно, она попала туда.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
